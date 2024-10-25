@@ -1,6 +1,13 @@
+// Essa é uma Classe de inicialização do app, onde carrega a pagina de inicio
+// Possui a rotas das principais paginas
+
+
+import 'package:anotacoes_de_pedidos/view/AnotacoesEntrega.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge); // comando para não deixar a barra de notificação preta quando utiliza SafeArea
   runApp(const MyApp());
 }
 
@@ -12,10 +19,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Anotações de Pedidos',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        primarySwatch: Colors.lightBlue,
         useMaterial3: true,
       ),
-      home: const Text("Hello World!"),
+      home: AnotacoesEntrega(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
