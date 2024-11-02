@@ -2,13 +2,22 @@
 // Possui a rotas das principais paginas
 
 
-import 'package:anotacoes_de_pedidos/view/AnotacoesEntrega.dart';
+import 'package:anotacoes_de_pedidos/view/Entrega/AnotacoesEntrega.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge); // comando para não deixar a barra de notificação preta quando utiliza SafeArea
-  runApp(const MyApp());
+  runApp(MaterialApp(
+      title: 'Anotações de Pedidos',
+      theme: ThemeData(
+        primarySwatch: Colors.lightBlue,
+        useMaterial3: true,
+      ),
+      home: AnotacoesEntrega(),
+      debugShowCheckedModeBanner: false,
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
