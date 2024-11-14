@@ -2,7 +2,7 @@
 // Possui a rotas das principais paginas
 
 
-import 'package:anotacoes_de_pedidos/view/login.dart';
+import 'package:anotacoes_de_pedidos/view/login_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,9 +12,9 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // ensure that the binding is initialized before accessing it.
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge); // comando para não deixar a barra de notificação preta quando utiliza SafeArea
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
 
   runApp(MaterialApp(
       title: 'Login',
@@ -22,7 +22,7 @@ void main() async {
         primarySwatch: Colors.lightBlue,
         useMaterial3: true,
       ),
-      home: const Login(),
+      home: const LoginView(),
       debugShowCheckedModeBanner: false,
     )
   );
